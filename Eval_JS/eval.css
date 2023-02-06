@@ -1,0 +1,29 @@
+button {
+    color: blue;
+    
+}
+li, a {
+    color: black; 
+}
+table{
+    border: 1px solid black;
+}
+td{
+    border: 1px solid black;
+}
+#tabs-4 li{
+    border:none;
+}
+
+.style1{
+    color:red;
+}
+.style2{
+    color:blue;
+}
+.style3{
+    font-weight: bold;
+}
+.style4{
+    font-style: italic;
+}

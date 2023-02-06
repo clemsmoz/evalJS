@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="eval.css" />
+    <title>EVAL JS</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  </head>
+  <body>
+    <nav id="menu">
+      <button class="menu-toggle" data-target="menu1">Menu 1</button>
+      <button class="menu-toggle" data-target="menu2">Menu 2</button>
+      <button class="menu-toggle" data-target="menu3">Menu 3</button>
+      <button class="menu-toggle" data-target="menu4">Menu 4</button>
+      <button class="menu-toggle" data-target="menu5">Menu 5</button>
+    </nav>
+
+    <div id="menu1" class="menu-item-content">
+      <script>
+        $(document).ready(function () {
+          $(".loup").mouseover(function () {
+            var imageSrc = $(this).text().toLowerCase() + ".jpeg";
+            $("#photo").attr("src", imageSrc);
+          });
+        });
+      </script>
+      <h2>Menu 1</h2>
+      <table>
+        <tr>
+          <td>lien1</td>
+          <td>lien2</td>
+          <td>lien3</td>
+        </tr>
+        <tr>
+          <td><a href="#" class="loup">loup1</a></td>
+          <td><a href="#" class="loup">loup2</a></td>
+          <td><a href="#" class="loup">loup3</a></td>
+        </tr>
+      </table>
+      <div>
+        <img id="photo" src="/default.jpeg" />
+      </div>
+    </div>
+
+    <div id="menu2" class="menu-item-content">
+      <script>
+        $(document).ready(function () {
+          $("#button").click(function () {
+            let param1 = $("#param1").val();
+            let param2 = $("#param2").val();
+
+            $("#tableau").append(
+              "<tr><td>" + param1 + "</td><td>" + param2 + "</td></tr>"
+            );
+          });
+        });
+      </script>
+      <h2>Menu 2</h2>
+      <div>
+        <input type="text" id="param1" placeholder="nom" />
+        <input type="text" id="param2" placeholder="prénom" />
+        <button id="button">envoyer</button>
+      </div>
+      <div>
+        <table id="tableau">
+          <tr>
+            <th></th>
+            <th></th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div id="menu3" class="menu-item-content">
+      <script>
+        $(document).ready(function () {
+          $("#style").change(function () {
+            $("#para").removeClass();
+            $("#para").addClass($(this).val());
+          });
+        });
+      </script>
+      <h2>Menu 3</h2>
+      <label for="style">choisi un style</label>
+      <select name="style" id="style">
+        <option value="style1">text en rouge</option>
+        <option value="style2">texte en bleu</option>
+        <option value="style3">texte en gras</option>
+        <option value="style4">texte en italique</option>
+      </select>
+      <h3>Paragraphe à modifier</h3>
+      <p id="para">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni
+        reiciendis, placeat natus doloribus eaque voluptate labore nihil neque
+        nemo cumque soluta ullam sed ipsam obcaecati consequuntur ut blanditiis
+        sequi assumenda, dicta ratione quibusdam rerum odit possimus! Alias
+        reiciendis suscipit harum voluptatem, rerum aliquid distinctio qui
+        quaerat repudiandae ab vel, mollitia fuga dolorem omnis numquam dolores
+        tenetur. Molestiae iste aperiam laudantium, atque fuga minima quo ipsam
+        voluptatum cumque doloribus ipsa nam quaerat porro distinctio excepturi
+        voluptate provident, commodi recusandae eligendi. Odit, repudiandae
+        harum ex corporis eum ipsum expedita, beatae esse nihil maxime suscipit
+        dignissimos sequi blanditiis debitis quis ullam sed! Rerum dolorum sint
+        in facere adipisci et rem ad, incidunt, impedit quidem, possimus
+        voluptatibus. Suscipit laborum inventore laudantium, doloremque dolorem
+        eos possimus, iste quo nobis perferendis fuga pariatur deserunt libero
+        corporis obcaecati magni voluptates aut est nisi! Expedita quo quidem
+        reiciendis in enim autem perferendis aliquam quas, eum earum? Voluptas
+        asperiores consequatur, tempora magnam cumque dolores! Provident, amet
+        laboriosam rem voluptatum iure et inventore enim porro placeat nam
+        nostrum ipsa ut itaque quos harum distinctio neque eveniet saepe ad
+        nobis odio debitis doloribus. Voluptatibus, optio. Quod exercitationem
+        ullam tempora quos. Consequuntur magnam, voluptas cum placeat sapiente
+        dolorem quae earum vero delectus corporis culpa necessitatibus sequi
+        non! Error quibusdam unde minus labore quisquam id et tempora suscipit
+        pariatur, sint earum eligendi maiores omnis illum illo molestias,
+        provident placeat optio sequi nostrum! Atque facilis obcaecati
+        consectetur, et ipsam mollitia porro quas architecto doloremque
+        necessitatibus, libero in, reiciendis quod id assumenda natus. Eveniet
+        beatae, nemo itaque eaque, delectus modi numquam blanditiis asperiores
+        totam, nesciunt assumenda. Eos eaque rerum totam repudiandae illo atque
+        accusamus, molestiae ducimus, tempore ullam beatae, voluptates autem
+        aliquam maxime ipsam fugit aspernatur impedit accusantium dicta. Nobis
+        ducimus deleniti tempora. Pariatur earum, at reprehenderit ab deserunt
+        fuga iure accusamus quisquam corporis a tempora libero eaque rerum
+        dolorem aliquam numquam ratione deleniti magni velit natus odit sed
+        soluta suscipit? Nulla, sed totam modi ex, fugit fuga architecto fugiat
+        nostrum temporibus consectetur, nobis voluptatum! Vero consectetur quia
+        totam at, culpa sed unde tempore quis esse natus ea nulla repudiandae?
+        Pariatur sequi, mollitia temporibus quia hic autem. Non iure a,
+        aspernatur ipsum minus sapiente. Tempora quod accusantium incidunt optio
+        perspiciatis corporis doloremque, animi itaque possimus magnam
+        architecto eum tenetur atque ipsa voluptate unde quasi fugiat, labore ex
+        autem. Quasi illo aperiam quos illum porro. Quis reprehenderit
+        voluptatum totam beatae veniam accusantium exercitationem nisi optio at
+        cupiditate suscipit corrupti sunt saepe iusto, accusamus non, explicabo
+        sint officia recusandae blanditiis aspernatur laborum? Totam cumque sed
+        alias autem minus necessitatibus eos maxime. Magnam iusto deleniti
+        assumenda modi, similique ipsam cumque nihil accusantium et, doloribus
+        nisi distinctio quas! Repudiandae odit quasi illo minus praesentium
+        officiis consectetur ut placeat molestiae. Eos alias aut minima mollitia
+        nihil molestiae cum amet, modi eveniet perspiciatis aspernatur tenetur
+        porro quae. Blanditiis rem obcaecati perferendis incidunt eos esse
+        deserunt maxime laudantium in magni rerum at, laboriosam animi possimus
+        facilis pariatur natus. Maxime iste natus nisi, neque nam voluptate hic
+        molestiae accusamus aliquid maiores blanditiis esse.
+      </p>
+    </div>
+
+    <div id="menu4" class="menu-item-content">
+      <h2>Menu 4</h2>
+      <ul id="Value">
+        <li>value 1</li>
+        <li>value 2</li>
+        <li>value 3</li>
+        <li>value 4</li>
+      </ul>
+
+      <button id="up">UP</button>
+      <button id="down">DOWN</button>
+
+      <script>
+        const list = document.getElementById("Value");
+        const items = list.getElementsByTagName("li");
+
+        document.getElementById("up").addEventListener("click", function () {
+          for (let i = items.length - 1; i >= 0; i--) {
+            list.appendChild(items[i]);
+          }
+        });
+
+        document.getElementById("down").addEventListener("click", function () {
+          for (let i = 0; i < items.length; i++) {
+            list.appendChild(items[i]);
+          }
+        });
+      </script>
+    </div>
+
+    <div id="menu5" class="menu-item-content">
+      <h2>Menu 5</h2>
+      <div>
+        <input type="radio" name="display-type" value="div" id="display-div" />
+        <label for="display-div">Div</label>
+        <input
+          type="radio"
+          name="display-type"
+          value="select"
+          id="display-select"
+        />
+        <label for="display-select">Dropdown</label>
+      </div>
+
+      <div>
+        <input type="checkbox" name="item" value="Item 1" id="item-1" />
+        <label for="item-1">Item 1</label>
+        <input type="checkbox" name="item" value="Item 2" id="item-2" />
+        <label for="item-2">Item 2</label>
+        <input type="checkbox" name="item" value="Item 3" id="item-3" />
+        <label for="item-3">Item 3</label>
+        <input type="checkbox" name="item" value="Item 4" id="item-4" />
+        <label for="item-4">Item 4</label>
+      </div>
+
+      <div id="resultat"></div>
+      <script>
+        const radioButtons = document.querySelectorAll('input[type="radio"]');
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const target = document.querySelector("#resultat");
+
+        radioButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            target.innerHTML = "";
+            let checkedItems = [];
+            checkboxes.forEach((checkbox) => {
+              if (checkbox.checked) {
+                checkedItems.push(checkbox.value);
+              }
+            });
+            if (radioButtons[0].checked) {
+              checkedItems.forEach((item) => {
+                const div = document.createElement("div");
+                div.textContent = item;
+                target.appendChild(div);
+              });
+            } else {
+              const select = document.createElement("select");
+              checkedItems.forEach((item) => {
+                const option = document.createElement("option");
+                option.textContent = item;
+                select.appendChild(option);
+              });
+              target.appendChild(select);
+            }
+          });
+        });
+      </script>
+    </div>
+    <style>
+      .menu-item-content {
+        display: none;
+      }
+    </style>
+    <script>
+      let currentOpenMenu = null;
+
+      const menuToggles = document.querySelectorAll(".menu-toggle");
+
+      for (const toggle of menuToggles) {
+        toggle.addEventListener("click", function () {
+          const target = document.getElementById(this.dataset.target);
+          if (currentOpenMenu === target) {
+            target.style.display = "none";
+            currentOpenMenu = null;
+          } else {
+            if (currentOpenMenu) {
+              currentOpenMenu.style.display = "none";
+            }
+            target.style.display = "block";
+            currentOpenMenu = target;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
